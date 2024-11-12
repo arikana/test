@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버거킹 메뉴 추천</title>
+</head>
+<body>
+    <h1>버거킹 메뉴 추천 프로그램</h1>
+    <form method="post">
+        <label for="budget">예산 입력 (원):</label>
+        <input type="number" id="budget" name="budget" required>
+        <button type="submit">추천받기</button>
+    </form>
+
+    {% if recommendation %}
+        <h2>추천 메뉴: {{ recommendation['name'] }} ({{ recommendation['price'] }}원)</h2>
+    {% endif %}
+</body>
+</html>
